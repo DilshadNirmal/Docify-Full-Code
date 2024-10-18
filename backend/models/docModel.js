@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-// mongodb+srv://Lamrin:<db_password>@cluster0.fcpt0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-mongoose.connect("mongodb+srv://Lamrin:Dahslid0220@cluster0.fcpt0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+
+mongoose.connect(process.env.MONGO_URI);
 
 const docSchema = mongoose.Schema({
   title: String,
