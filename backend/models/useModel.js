@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://Lamrin:Dahslid0220@cluster0.fcpt0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect(process.env.MONGO_URI);
 
 const userSchema = new mongoose.Schema({
     name: String,
